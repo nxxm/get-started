@@ -15,8 +15,6 @@ Take a look at [.nxxm/deps](.nxxm/deps) to see how we added nlohmann::json and B
 ## Look there are no build recipes, it will build by conventions.
 
 ```
-$> tree .
-.
 ├── README.md
 ├── src
 │   ├── app.cpp
