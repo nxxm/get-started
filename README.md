@@ -29,7 +29,7 @@ Take a look at [.nxxm/deps](.nxxm/deps) to see how we added js-bind and Boost he
 
 
 ## Compile
-* **WebAssembly with C++17 support: ** `nxxm . `
+* **WebAssembly with C++17 support:** `nxxm . `
 
 ### Compiling for another platform
 If you want to compile for another platform, you simply can do the following : 
