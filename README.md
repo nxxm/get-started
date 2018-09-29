@@ -6,9 +6,8 @@ Take a look at [.nxxm/deps](.nxxm/deps) to see how we added nlohmann::json and B
 
 ```js
 {
-    "nlohmann/json" : { "@" : "v3.2.0" }
-
-  , "platform" : [ "Boost::+boost" ]
+  "nxxm/js-bind" : { "@" : "v2.0.1" }
+  , "platform" : ["Boost::+boost"]
 }
 ```
 

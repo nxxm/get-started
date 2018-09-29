@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en_US">
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+
+  <h1>Call C++ back</h1>
+  <div id="result_div">Which Boost version do you have ?</div>
+  <button id="clickme_btn">Click me</button>
+
+  <script type="text/c++">
+
+    #include <boost/version.hpp>
+    #include <js/bind.hpp>
+
+    using namespace std::placeholders;
+    using namespace std::string_literals;
+    using emscripten::val;
+
+    int main() {
+      auto clickme_btn = val::global("document").call<val>("getElementById", "clickme_btn"s);
+
+      auto onclick = [](val event){ 
+        auto result_div = val::global("document").call<val>("getElementById", "result_div"s);
+        
+        auto str = "We have boost version : "s + BOOST_LIB_VERSION;
+        val::global("result_div").set("innerHTML", str);
+      };
+
+      clickme_btn.set("onclick", js::bind(onclick, _1));
+
+      return 0;
+    }
+ </script> 
+</body>
+</html>
