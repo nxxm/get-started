@@ -2,7 +2,7 @@
 
 Welcome in the nxxm getting started project !
 
-Take a look at [.nxxm/deps](.nxxm/deps) to see how we added nlohmann::json and Boost headers distribution to the build : 
+Take a look at [.nxxm/deps](.nxxm/deps) to see how we added js-bind and Boost headers distribution to the build : 
 
 ```js
 {
