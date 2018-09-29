@@ -14,9 +14,11 @@ Take a look at [.nxxm/deps](.nxxm/deps) to see how we added nlohmann::json and B
 ## Look there are no build recipes, it will build by conventions.
 
 ```
-├── README.md
+├── .nxxm
+│   └── deps
 ├── src
-│   ├── app.cpp
+│   ├── app.html
+│   ├── command-line-app.cpp
 │   └── getting_started
 │       ├── print_boost_version.cpp
 │       └── print_boost_version.hpp
@@ -27,17 +29,26 @@ Take a look at [.nxxm/deps](.nxxm/deps) to see how we added nlohmann::json and B
 
 
 ## Compile
+* **WebAssembly with C++17 support: ** `nxxm . `
 
-* **WebAssembly :** `nxxm . `
-* **Host :** `nxxm . -t cxx17`
+### Compiling for another platform
+If you want to compile for another platform, you simply can do the following : 
 
-## Compile'n'run
+  * `nxxm . -t wasm-cxx17` : all included, works out of the box.
+  * `nxxm . -t gcc-7-cxx17` : GCC 7 must be installed on your host machine.
+  * `nxxm . -t clang-cxx17` : Clang must be installed on your host machine.
+  * `nxxm . -t vs-15-2017-win64-cxx17` : VS 2017 must be installed on your host machine.
 
-* **WebAssembly :** `nxxm . --test src/app`
-* **Host :** `nxxm . -t cxx17 --test src/app`
+## Running
+Open it with your browser (firefox doesn't need but other requires you to serve the file with a webserver to allow WebAssembly execution) : 
+* `firefox build/wasm-cxx17/bin/src/app.html`
+
+Run the command line app with our bundled NodeJS :
+* `nxxm . --test src/command-line-app`
 
 ## You are ready to focus on C++
 If you want to learn more join us on  [nxxm.github.io](https://nxxm.github.io)   or [read the docs](https://nxxm-docs.readthedocs.io/en/latest/index.html).
+
 
 ## Thanks
 Thanks for testing nxxm, we hope you enjoy it as we do. 🤗
