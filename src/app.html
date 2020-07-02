@@ -10,6 +10,7 @@
   <button id="clickme_btn">Click me</button>
 
   <script type="text/c++">
+    #if defined(__EMSCRIPTEN__)
 
     #include <boost/version.hpp>
     #include <js/bind.hpp>
@@ -32,6 +33,8 @@
 
       return 0;
     }
+
+    #endif
  </script> 
 </body>
 </html>
