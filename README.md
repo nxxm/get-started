@@ -40,8 +40,9 @@ If you want to compile for another platform, you simply can do the following :
   * `nxxm . -t vs-15-2017-win64-cxx17` : VS 2017 must be installed on your host machine.
 
 ## Running
-Open it with your browser (firefox doesn't need but other requires you to serve the file with a webserver to allow WebAssembly execution) : 
-* `firefox build/wasm-cxx17/bin/src/app.html`
+Open it with your browser  : 
+* npm install --global http-server && http-server .
+* google-chrome [http://127.0.0.1:8080/build/wasm-cxx17/bin/src/app.html](http://127.0.0.1:8080/build/wasm-cxx17/bin/src/app.html)
 
 Run the command line app with our bundled NodeJS :
 * `nxxm . --test src/command-line-app`
