@@ -41,7 +41,7 @@ If you want to compile for another platform, you simply can do the following :
 
 ## Running
 Open it with your browser  : 
-* npm install --global http-server && http-server .
+* `npm install --global http-server && http-server .`
 * google-chrome [http://127.0.0.1:8080/build/wasm-cxx17/bin/src/app.html](http://127.0.0.1:8080/build/wasm-cxx17/bin/src/app.html)
 
 Run the command line app with our bundled NodeJS :
