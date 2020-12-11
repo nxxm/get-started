@@ -37,12 +37,13 @@ If you want to compile for another platform, you simply can do the following :
   * `nxxm . -t wasm-cxx17` : all included, works out of the box.
   * `nxxm . -t gcc-7-cxx17` : GCC 7 must be installed on your host machine.
   * `nxxm . -t clang-cxx17` : Clang must be installed on your host machine.
-  * `nxxm . -t vs-15-2017-win64-cxx17` : VS 2017 must be installed on your host machine.
+  * `nxxm . -t vs-16-2019-win64-cxx17` : VS 2017 must be installed on your host machine.
 
 ## Running
 Open it with your browser  : 
-* `npm install --global http-server && http-server .`
+* `nxxm run npm install --global http-server && http-server .`
 * google-chrome [http://127.0.0.1:8080/build/wasm-cxx17/bin/src/app.html](http://127.0.0.1:8080/build/wasm-cxx17/bin/src/app.html)
+
 
 Run the command line app with our bundled NodeJS :
 * `nxxm . --test src/command-line-app`

@@ -1,4 +1,4 @@
 {
-  "nxxm/js-bind" : { "@" : "v0.0.3" }
-  , "platform" : ["Boost::+boost"]
+  "nxxm/js-bind" : { "@" : "v0.0.3" } ,
+  "platform" : ["Boost::+boost"]
 }
